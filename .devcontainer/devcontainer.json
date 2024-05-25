@@ -1,0 +1,5 @@
+{
+  "name": "Python FastAPI",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}
