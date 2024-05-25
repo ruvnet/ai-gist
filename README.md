@@ -139,5 +139,28 @@ To check the database contents, use the `check_db.sh` script:
   }
   ```
 
-This `README.md` provides comprehensive instructions and examples for using the FastAPI application to manage GitHub gists.
- 
+## Chat System
+
+The chat system leverages LiteLLM to interpret user messages and perform actions based on the responses. The endpoint `/chat/gist` handles incoming chat requests, processes them through LiteLLM, and performs actions such as creating or updating gists based on the responses.
+
+### How It Works
+
+1. **Receiving Chat Messages**: The endpoint `/chat/gist` receives a POST request with a list of chat messages.
+2. **Calling LiteLLM API**: The `chat_completion` function sends these messages to the LiteLLM API using the GPT-4o model.
+3. **Processing the Response**: Based on the `action` field in the response, the endpoint either creates or updates a gist.
+4. **Handling Errors**: Any exceptions are caught and a 500 Internal Server Error is returned with the error details.
+
+### LiteLLM Features
+
+LiteLLM offers numerous features that streamline interaction with various LLM providers:
+
+- **Unified Interface**: Supports 100+ LLMs using the same Input/Output format, including OpenAI, Hugging Face, Anthropic, Cohere, and more.
+- **Error Handling and Retries**: Automatic error handling and retry mechanism, switching to alternative providers if one fails.
+- **Streaming Support**: Efficiently handle memory-intensive tasks by retrieving large model outputs in chunks.
+- **Open-Source and Community-Driven**: Benefit from transparency and ongoing development by the open-source community.
+- **Reduced Complexity**: Simplifies interactions with different provider APIs.
+- **Increased Flexibility**: Allows experimentation with various LLMs.
+- **Improved Efficiency**: Saves time with uniform code structure and automated error handling.
+- **Cost-Effectiveness**: Optimizes costs by exploring different pricing models across providers.
+
+For more details, refer to the [LiteLLM documentation](https://docs.litellm.ai).
