@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='aigist',
-    version='0.0.1',
+    version='0.0.4',
     packages=find_packages(),
     install_requires=[
         'twine',

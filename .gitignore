@@ -6,3 +6,5 @@ __pycache__/
 build
 dist
 .env
+aigist.egg-info
+PKG-INFO*

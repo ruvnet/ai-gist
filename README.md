@@ -8,7 +8,17 @@
 ```
 # Ai Gist
 
-This project provides a FastAPI application to create and update GitHub gists using the GitHub API. It includes SQLite for persistence and is designed to run in a GitHub Codespace.
+Ai Gist is python application designed to help you create and manage GitHub gists effortlessly using the GitHub API. With built-in SQLite for persistence and seamless integration with AI language models (LLMs), Ai Gist offers powerful capabilities for automating your workflow.
+
+## Key Features
+
+- **Easy Gist Management**: Create, update, and list GitHub gists with simple API calls.
+- **AI-Powered Interactions**: Utilize advanced AI language models to interpret user messages and perform actions based on responses.
+- **SQLite Integration**: Store and manage data locally with SQLite, ensuring persistence and reliability.
+- **FastAPI Framework**: Benefit from the high performance and ease of use provided by the FastAPI framework.
+
+Get started quickly by installing the application and running the server to leverage these features for an enhanced coding experience.
+
 
 ## Setup
 
@@ -19,16 +29,16 @@ This project provides a FastAPI application to create and update GitHub gists us
 2. **Install Dependencies**:
    - The setup script will automatically install necessary dependencies and set up the environment.
 
-3. **Initialize the Database**:
-   - Run the database initialization script to create the necessary database and tables:
-     ```bash
-     python init_db.py
-     ```
-
-4. **Install the Package**:
+3. **Install the Package**:
    - Install the package in editable mode:
      ```bash
      pip install aigist
+     ```
+
+4. **Initialize the Database**:
+   - Run the database initialization script to create the necessary database and tables:
+     ```bash
+     python init_db.py
      ```
 
 5. **Run the Application**:
