@@ -28,7 +28,7 @@ This project provides a FastAPI application to create and update GitHub gists us
 4. **Install the Package**:
    - Install the package in editable mode:
      ```bash
-     pip install -e .
+     pip install aigist .
      ```
 
 5. **Run the Application**:
