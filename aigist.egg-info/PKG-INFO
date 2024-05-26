@@ -1,4 +1,31 @@
-```
+Metadata-Version: 2.1
+Name: aigist
+Version: 0.0.1
+Summary: This project provides a FastAPI application to create and update GitHub gists using the GitHub API. It includes SQLite for persistence and is designed to run in a GitHub Codespace.
+Home-page: 
+Author: rUv
+Author-email: 
+License: Apache License 2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: twine
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: flake8
+Requires-Dist: black
+Requires-Dist: pytest
+Requires-Dist: pip-upgrader
+
+```                       
  _____ _ _____ _     _   
 |  _  |_|   __|_|___| |_ 
 |     | |  |  | |_ -|  _|
@@ -19,32 +46,11 @@ This project provides a FastAPI application to create and update GitHub gists us
 2. **Install Dependencies**:
    - The setup script will automatically install necessary dependencies and set up the environment.
 
-3. **Initialize the Database**:
-   - Run the database initialization script to create the necessary database and tables:
-     ```bash
-     python init_db.py
-     ```
-
-4. **Install the Package**:
-   - Install the package in editable mode:
-     ```bash
-     pip install -e .
-     ```
-
-5. **Run the Application**:
+3. **Run the Application**:
    - Start the FastAPI server using Uvicorn:
      ```bash
-     aigist
+     uvicorn app.main:app --reload
      ```
-
-## Configuration
-
-- **Environment Variables**:
-  - Ensure the following environment variables are set:
-    - `GITHUB_TOKEN`: Your GitHub token.
-    - `LITELLM_API_BASE`: The base URL for the LiteLLM API.
-    - `LITELLM_API_KEY`: Your LiteLLM API key.
-    - `LITELLM_MODEL`: The model to use for LiteLLM (e.g., gpt-4o-2024-05-1).
 
 ## Endpoints
 
@@ -121,9 +127,14 @@ pytest
 
 ## Database Setup
 
-To ensure the database and table setup is correct, run the `init_db.py` script:
+To ensure the database and table setup is correct, run the `setup_database.sh` script:
 ```bash
-python init_db.py
+./setup_database.sh
+```
+
+To check the database contents, use the `check_db.sh` script:
+```bash
+./check_db.sh
 ```
 
 ### Example JSON Payloads
@@ -180,4 +191,3 @@ LiteLLM offers numerous features that streamline interaction with various LLM pr
 - **Cost-Effectiveness**: Optimizes costs by exploring different pricing models across providers.
 
 For more details, refer to the [LiteLLM documentation](https://docs.litellm.ai).
- 

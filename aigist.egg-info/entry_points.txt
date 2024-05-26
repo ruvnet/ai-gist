@@ -1,0 +1,2 @@
+[console_scripts]
+aigist = aigist.main:main

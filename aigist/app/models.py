@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Dict, Optional
+from typing import List, Optional
 
 class FileContent(BaseModel):
     content: str
@@ -17,8 +17,12 @@ class GistUpdateRequest(BaseModel):
     description: Optional[str]
     files: List[GistFile]
 
+class ChatMessage(BaseModel):
+    role: str
+    content: str
+
 class ChatRequest(BaseModel):
-    messages: List[Dict[str, str]]
+    messages: List[ChatMessage]
     stream: bool = False
 
 class GistFilterRequest(BaseModel):
